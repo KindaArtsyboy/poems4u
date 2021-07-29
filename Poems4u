@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Holis.pyw</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Holis.pyw</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">import </span><span class="s1">tkinter </span><span class="s0">as </span><span class="s1">tk</span>
+<a name="l2"><span class="ln">2    </span></a><span class="s0">from </span><span class="s1">tkinter </span><span class="s0">import </span><span class="s1">*</span>
+<a name="l3"><span class="ln">3    </span></a><span class="s0">import </span><span class="s1">os</span>
+<a name="l4"><span class="ln">4    </span></a>
+<a name="l5"><span class="ln">5    </span></a>
+<a name="l6"><span class="ln">6    </span></a><span class="s1">names = str(os.getcwd())+</span><span class="s2">&quot;\icon.ico&quot;</span>
+<a name="l7"><span class="ln">7    </span></a>
+<a name="l8"><span class="ln">8    </span></a>
+<a name="l9"><span class="ln">9    </span></a><span class="s1">win = tk.Tk()</span>
+<a name="l10"><span class="ln">10   </span></a><span class="s1">win.title(</span><span class="s2">&quot;Quieres leer un poema?&quot;</span><span class="s1">)  </span><span class="s3"># update2: title does work after the change = to () cuz me stupid</span>
+<a name="l11"><span class="ln">11   </span></a><span class="s1">win.geometry = </span><span class="s4">1800 </span><span class="s1">* </span><span class="s4">1800</span>
+<a name="l12"><span class="ln">12   </span></a><span class="s1">win.iconbitmap(names)</span>
+<a name="l13"><span class="ln">13   </span></a>
+<a name="l14"><span class="ln">14   </span></a>
+<a name="l15"><span class="ln">15   </span></a><span class="s3"># new window</span>
+<a name="l16"><span class="ln">16   </span></a>
+<a name="l17"><span class="ln">17   </span></a><span class="s0">def </span><span class="s1">window_opener():</span>
+<a name="l18"><span class="ln">18   </span></a>    <span class="s1">poemwin = tk.Toplevel(win)</span>
+<a name="l19"><span class="ln">19   </span></a>    <span class="s1">poemwin.geometry = </span><span class="s4">1800 </span><span class="s1">* </span><span class="s4">1800</span>
+<a name="l20"><span class="ln">20   </span></a>    <span class="s1">poemwin.iconbitmap(names)</span>
+<a name="l21"><span class="ln">21   </span></a>    <span class="s1">poemwin.title(</span><span class="s2">&quot;De ella&quot;</span><span class="s1">)</span>
+<a name="l22"><span class="ln">22   </span></a>
+<a name="l23"><span class="ln">23   </span></a>    <span class="s1">textos = </span><span class="s2">&quot;El primero de mis secretos que quiero rugir a tierras y planetas. Que la pasión rasque oídos</span><span class="s0">\n</span><span class="s2">de las montañas que quieren cubrir del deleite tallado en tus risas. Yo las romperé.</span><span class="s0">\n\n</span><span class="s2">Que los relojes discípulos de tiempos discrepantes silencien sus manecillas y las volteen</span><span class="s0">\n</span><span class="s2">paralelas a las líneas de tus cuadernos; si tu mano sobre el tiempo más agobiante</span><span class="s0">\n </span><span class="s2">escribe las maravillas de lo qué hay en ti, entonces no dudare en brindarle adoración.</span><span class="s0">\n</span><span class="s2">Si los molinos de las manecillas no nos dan harina cada tic, igual el fino polvo de su misterio</span><span class="s0">\n</span><span class="s2">será suficiente para saciarnos tan solo en sabiendas que entre nos no existen los minutos.</span><span class="s0">\n</span><span class="s2">Tic y tac y tic y tac y tic y tic y tic y tic y ¡Oh sublimidad de ojos! un segundo basta para </span><span class="s0">\n</span><span class="s2">penetrar las profundidades de un alma errante</span><span class="s0">\n\n</span><span class="s2">Tic y tac y el alma la has anclado en los cráteres de tus lunas, no obstante la gravedad la lleva al centro de tus profundos y bellos mares.</span><span class="s0">\n\n</span><span class="s2">Y tac y tac y tic y tac y navegaremos más allá de los números de cristal, al borde de las locuras </span><span class="s0">\n</span><span class="s2">en la bahía de la virtud del amor.&quot;</span>
+<a name="l24"><span class="ln">24   </span></a>    <span class="s1">titulo = tk.Text(poemwin</span><span class="s0">, </span><span class="s1">height=</span><span class="s4">1</span><span class="s0">, </span><span class="s1">width=</span><span class="s4">73</span><span class="s0">, </span><span class="s1">font=</span><span class="s2">&quot;Times 20&quot;</span><span class="s1">)</span>
+<a name="l25"><span class="ln">25   </span></a>    <span class="s1">titulo.insert(tk.END</span><span class="s0">, </span><span class="s2">&quot;De ella...&quot;</span><span class="s1">)</span>
+<a name="l26"><span class="ln">26   </span></a>    <span class="s1">titulo.grid(column=</span><span class="s4">1</span><span class="s0">, </span><span class="s1">row=</span><span class="s4">0</span><span class="s1">)</span>
+<a name="l27"><span class="ln">27   </span></a>    <span class="s1">poema = tk.Text(poemwin</span><span class="s0">, </span><span class="s1">height=</span><span class="s4">10</span><span class="s0">, </span><span class="s1">width=</span><span class="s4">73</span><span class="s0">, </span><span class="s1">font=</span><span class="s2">&quot;Times 12&quot;</span><span class="s1">)</span>
+<a name="l28"><span class="ln">28   </span></a>    <span class="s1">poema.insert(tk.END</span><span class="s0">, </span><span class="s1">textos)</span>
+<a name="l29"><span class="ln">29   </span></a>    <span class="s1">poema.grid(column=</span><span class="s4">1</span><span class="s0">, </span><span class="s1">row=</span><span class="s4">1</span><span class="s1">)</span>
+<a name="l30"><span class="ln">30   </span></a>    <span class="s1">scr = Scrollbar(poemwin</span><span class="s0">, </span><span class="s1">command=poema.yview)</span>
+<a name="l31"><span class="ln">31   </span></a>    <span class="s1">scr.grid(column=</span><span class="s4">2</span><span class="s0">, </span><span class="s1">row=</span><span class="s4">1</span><span class="s0">, </span><span class="s1">sticky=NS)</span>
+<a name="l32"><span class="ln">32   </span></a>
+<a name="l33"><span class="ln">33   </span></a>
+<a name="l34"><span class="ln">34   </span></a><span class="s3"># i should def every function before running things i guess</span>
+<a name="l35"><span class="ln">35   </span></a><span class="s3"># making a new window inside of a def function creates an exception</span>
+<a name="l36"><span class="ln">36   </span></a>
+<a name="l37"><span class="ln">37   </span></a>
+<a name="l38"><span class="ln">38   </span></a><span class="s1">text_box = Text(win</span><span class="s0">, </span><span class="s1">height=</span><span class="s4">5</span><span class="s0">, </span><span class="s1">width=</span><span class="s4">40</span><span class="s1">)</span>
+<a name="l39"><span class="ln">39   </span></a><span class="s1">text_box.grid(column=</span><span class="s4">1</span><span class="s0">, </span><span class="s1">row=</span><span class="s4">1</span><span class="s1">)</span>
+<a name="l40"><span class="ln">40   </span></a>
+<a name="l41"><span class="ln">41   </span></a>
+<a name="l42"><span class="ln">42   </span></a><span class="s0">def </span><span class="s1">input_getter():  </span><span class="s3"># this reads stuff and ye</span>
+<a name="l43"><span class="ln">43   </span></a>    <span class="s1">value = text_box.get(</span><span class="s2">&quot;1.0&quot;</span><span class="s0">, </span><span class="s2">&quot;end-1c&quot;</span><span class="s1">)</span>
+<a name="l44"><span class="ln">44   </span></a>    <span class="s0">if </span><span class="s1">str(value) == str(</span><span class="s2">&quot;si&quot;</span><span class="s1">) </span><span class="s0">or </span><span class="s1">str(value) == str(</span><span class="s2">&quot;Si&quot;</span><span class="s1">) </span><span class="s0">or </span><span class="s1">str(value) == str(</span><span class="s2">&quot;Sí&quot;</span><span class="s1">) </span><span class="s0">or </span><span class="s1">str(value) == str(</span><span class="s2">&quot;sí&quot;</span><span class="s1">) </span><span class="s0">or </span><span class="s1">str(value) == str(</span><span class="s2">&quot;siu&quot;</span><span class="s1">):</span>
+<a name="l45"><span class="ln">45   </span></a>        <span class="s1">window_opener()</span>
+<a name="l46"><span class="ln">46   </span></a>        <span class="s1">correcto_texto = tk.Label(win</span><span class="s0">, </span><span class="s1">text=</span><span class="s2">&quot;Aqui esta el poema&quot;</span><span class="s1">)</span>
+<a name="l47"><span class="ln">47   </span></a>        <span class="s1">correcto_texto.grid(column=</span><span class="s4">1</span><span class="s0">, </span><span class="s1">row=</span><span class="s4">3</span><span class="s1">)</span>
+<a name="l48"><span class="ln">48   </span></a>    <span class="s0">else</span><span class="s1">:</span>
+<a name="l49"><span class="ln">49   </span></a>        <span class="s1">text_box.delete(</span><span class="s2">&quot;1.0&quot;</span><span class="s0">, </span><span class="s2">&quot;end-1c&quot;</span><span class="s1">)</span>
+<a name="l50"><span class="ln">50   </span></a>
+<a name="l51"><span class="ln">51   </span></a><span class="s1">comment = Button(win</span><span class="s0">, </span><span class="s1">height=</span><span class="s4">5</span><span class="s0">, </span><span class="s1">width=</span><span class="s4">30</span><span class="s0">, </span><span class="s1">text=</span><span class="s2">&quot;esto&quot;</span><span class="s0">, </span><span class="s1">activebackground=</span><span class="s2">&quot;#EC7373&quot;</span><span class="s0">, </span><span class="s1">command=</span><span class="s0">lambda</span><span class="s1">: input_getter())</span>
+<a name="l52"><span class="ln">52   </span></a><span class="s1">comment.grid(column=</span><span class="s4">2</span><span class="s0">, </span><span class="s1">row=</span><span class="s4">1</span><span class="s1">)</span>
+<a name="l53"><span class="ln">53   </span></a><span class="s1">win.mainloop()</span>
+<a name="l54"><span class="ln">54   </span></a></pre>
+</body>
+</html>
